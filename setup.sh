@@ -10,7 +10,7 @@ salt_minion_setup () {
 	fi
 }
 
-echo "master: 10.0.0.52" >> /etc/salt/minion && \
+echo "master: $1" >> /etc/salt/minion && \
 echo "id: salt-docker-minion-$(hostname)" >> /etc/salt/minion
 
 service salt-minion start && \
