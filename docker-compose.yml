@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  minion:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - './salt/:/etc/salt/'
+      - './logs/:/var/log/salt/'
